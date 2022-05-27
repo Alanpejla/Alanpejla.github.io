@@ -1,0 +1,269 @@
+/*GENERAL
+
+--------------------------*/
+
+
+*{
+    font-family: 'Roboto-Flex', sans-serif;  
+    font-size: 16px;
+}
+
+body {
+    padding: 0;
+    margin-left: 0;
+    overflow-x: hidden;
+}
+
+.brand {
+    /*color: white*/
+    /* padding: 40px;*/
+    font-size: 150%; 
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+video{
+    padding-left:  80%;
+}
+iframe {
+        margin-bottom: 1em;
+        border: solid 2px rgba(92, 92, 92, 1);
+}
+
+#imagen-about{
+    max-width: 70%;
+    height: auto;
+   margin: 0 auto;
+   display: block;
+}
+
+
+
+/*TEXTOS
+
+--------------------------*/
+
+
+.parrafo {
+    font-size: 120%;
+    overflow: auto;
+    box-sizing: content-box;
+    word-wrap: break-word;
+    padding: 0 10px;
+    text-align: justify;
+    width: 95%;
+}
+
+
+
+#primer-parrafo {
+    font-size: 1,2rem;
+    padding-top: 2%;
+    overflow: auto;
+}
+
+.titulo {
+    font-size: 1.5rem;
+     padding-top: 100px;
+     margin-top: 0;
+     max-width: 90%;
+}
+
+.loader {
+	position: fixed;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background: #ffffff;
+    z-index: 10;
+}
+
+.loader.hide {
+    display: none;
+}
+
+.loader > img {
+    animation: 3s pulse 1s infinite;
+}
+
+#iframe-data {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale (0.15);
+        opacity: 0;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+
+.navigation-bar {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 80px;
+background-color: black;
+color: white;
+display: flex;
+align-items: center;
+} 
+
+
+
+
+.navigation-bar > .brand {
+    margin-right: 40px;
+    color: lightgray;
+    width: 40%;
+}
+
+.navigation-bar > .brand:hover {
+    color: white;
+}
+
+.navigation-bar > .nav-buttons {
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+}
+
+
+.navigation-bar > .nav-buttons > .nav-item {
+    margin: 0 10px;
+    padding: 10px;
+}
+
+.navigation-bar > .nav-buttons > .nav-item > a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+.navigation-bar > .nav-buttons > .nav-item > a:hover {
+    color: white;
+}
+
+.navigation-bar > .nav-buttons > .nav-item:hover {
+    background-color: darkgray;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(161, 159, 161,.5);
+}
+
+
+.full-page-section {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(161, 159, 161,.5);
+    margin: 0;
+}
+
+
+a:link { 
+    color:rgba(255, 0, 0, .5)
+}
+a:visited {
+    color: blueviolet;
+}
+
+.columnas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form.contact-form {
+    margin-left: 50px;
+}
+
+form.contact-form > input {
+    display: block;
+    margin-bottom: 20px;
+}
+
+form.contact-form > input.checkbox {
+    display: inline-block;
+}
+
+form.contact-form > button {
+    display: block;
+    background-color: rgb(116, 105, 179);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+  /*1100 px para arriba*/
+ @media screen and (min-width: 1100px) {
+    .flex-container {
+       font-family: 'Courier New', Courier, monospace;
+       background-color:rgba(255, 0, 0, .3)
+    }
+}
+
+
+/*CEL*/
+@media screen and (max-width: 570px) {
+    .brand {
+        display: none;
+    }
+    .navigation-bar > .nav-buttons {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .columnas{
+        flex-wrap: wrap;
+    }
+    .loader > img {
+       width: 75vw;
+    }
+    form.contact-form {
+        margin-left: 0;
+    }
+    body {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /*TABLET*/
+  @media screen and (max-width: 750px) {
+    header{
+        height: unset;
+    }
+    .full-page-section{
+      height: unset;
+  }
+    body {
+      font-size: 1.2rem;
+    }
+  }
+  
+  
+
+
+/*https://www.w3schools.com/css/css3_flexbox_responsive.asp
+https://www.w3schools.com/Css/css3_mediaqueries_ex.asp
+https://duckduckgo.com/?q=hacer+web+responsive+css+flexbox&atb=v314-1&ia=web
+*/
